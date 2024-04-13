@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Checkbox Snake</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+
+<style>
+*, *::before, *::after {
+  font-family: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:where(html) {
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 62.5%;
+}
+
+:where(html body) {
+  font-size: 1.6rem;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scoreboard {
+    top: -100px;
+    left: 50%;
+    font-size: 2rem;
+    color: red;
+    z-index: 10; /* Убедитесь, что счет находится над игровым полем */
+}
+
+:where(ul) {
+  list-style: none;
+}
+
+:where(a, a:link, a:visited) {
+  text-decoration: none;
+}
+</style><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<main>
+    <div class="scoreboard">Score: <span id="current-score">0</span></div>
+    <div class="game"></div>
+	<div class="game"></div>
+	<div class="game-over">
+		<h2>GAME OVER</h2>
+		<p>Your score: <span id="score">0</span></p>
+		<button id="restart">Restart</button>
+	</div>
+</main>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
